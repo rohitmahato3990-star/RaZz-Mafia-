@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>RaZz Mafia™</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:Arial,sans-serif;color:#fff;background:radial-gradient(circle at 50% 10%,#28314f,#090a10 45%,#020204 85%);display:flex;justify-content:center;align-items:center;overflow-x:hidden}
+.wrap{width:100%;max-width:480px;min-height:100vh;padding:18px;display:flex;align-items:center}
+.card{width:100%;padding:28px 18px;border-radius:30px;text-align:center;background:rgba(7,8,14,.78);border:1px solid #ffffff20;box-shadow:0 30px 90px #000b;backdrop-filter:blur(18px)}
+.avatar{width:120px;height:120px;margin:0 auto 18px;border-radius:50%;position:relative;background:linear-gradient(145deg,#26304a,#050608);border:2px solid #fff;box-shadow:0 0 0 7px #ffffff08,0 0 45px #467cff55;overflow:hidden}
+.avatar:before{content:"";position:absolute;width:58px;height:58px;border-radius:50%;background:#020305;top:18px;left:29px}
+.avatar:after{content:"";position:absolute;width:100px;height:75px;border-radius:55% 55% 15% 15%;background:#020305;left:10px;bottom:-12px}
+h1{font-size:31px;margin-bottom:8px}
+.sub{color:#a9afbd;font-size:14px;line-height:1.55}
+.badge{display:inline-block;margin:0 auto 17px;padding:7px 13px;border-radius:30px;background:#ffffff0d;border:1px solid #ffffff14;font-size:10px;letter-spacing:1.5px}
+.active{display:inline-flex;gap:8px;align-items:center;margin:18px 0;padding:8px 13px;border-radius:30px;background:#35e87910;color:#cbd4ce;font-size:11px}
+.dot{width:7px;height:7px;border-radius:50%;background:#35e879;box-shadow:0 0 12px #35e879}
+.count{padding:16px;margin:5px 0 18px;border-radius:18px;background:#ffffff08;border:1px solid #ffffff0d}
+.count small{display:block;color:#737b8b;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+#timer{font-size:25px;font-weight:900}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:18px}
+.feature{padding:13px 9px;text-align:left;border-radius:15px;background:#ffffff07;border:1px solid #ffffff0b}
+.feature b{font-size:12px}.feature p{color:#737b8b;font-size:10px;margin-top:4px}
+.join{display:block;padding:18px;border-radius:17px;text-decoration:none;color:#fff;font-weight:900;font-size:17px;background:linear-gradient(135deg,#229ed9,#1474b1);box-shadow:0 12px 35px #229ed94d;transition:.2s}
+.join:active{transform:scale(.97)}
+.note{color:#646b7b;font-size:10px;line-height:1.5;margin-top:12px}
+.footer{color:#454b59;font-size:10px;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap"><main class="card">
+<div class="badge">⚡ OFFICIAL COMMUNITY</div>
+<div class="avatar"></div>
+<h1>𝐑𝐚𝐙𝐳 𝐌𝐚𝐟𝐢𝐚™ ✓</h1>
+<p class="sub">Welcome to the official RaZz Mafia™ community. Stay connected with the latest updates and announcements.</p>
+<div class="active"><span class="dot"></span>Community Active Now</div>
+<div class="count"><small>Next Community Update</small><div id="timer">00d 00:00:00</div></div>
+<div class="features">
+<div class="feature">🔥 <b>Exclusive Updates</b><p>Important community news.</p></div>
+<div class="feature">⚡ <b>Fast Alerts</b><p>Stay updated instantly.</p></div>
+<div class="feature">👑 <b>Community</b><p>Join the growing family.</p></div>
+<div class="feature">🔒 <b>Official Channel</b><p>One place for updates.</p></div>
+</div>
+<a class="join" href="https://t.me/+QAdxrcZgwtM1Mjg1" target="_blank" rel="noopener">✈️ JOIN TELEGRAM NOW</a>
+<p class="note">Tap above to open Telegram and join the official community.</p>
+<div class="footer">© 2026 RaZz Mafia™</div>
+</main></div>
+<script>
+const launch=new Date("2026-08-30T00:00:00").getTime();
+function tick(){
+ let d=launch-Date.now(),t=document.getElementById("timer");
+ if(d<=0){t.textContent="🔥 LIVE NOW";return}
+ let days=Math.floor(d/86400000);d%=86400000;
+ let h=Math.floor(d/3600000);d%=3600000;
+ let m=Math.floor(d/60000);d%=60000;
+ let s=Math.floor(d/1000);
+ t.textContent=String(days).padStart(2,"0")+"d "+String(h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>

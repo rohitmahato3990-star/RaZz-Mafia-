@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rohitmahato3990-star.github.io/RaZz-Mafia-/sitemap.xml
